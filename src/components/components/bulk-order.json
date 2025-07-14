@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_components_bulk_orders",
+  "info": {
+    "displayName": "bulkOrder",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "card1": {
+      "type": "component",
+      "component": "components.card",
+      "repeatable": false
+    },
+    "card2": {
+      "type": "component",
+      "component": "components.card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

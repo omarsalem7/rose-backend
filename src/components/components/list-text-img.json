@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_components_list_text_img_s",
+  "info": {
+    "displayName": "list(text-img)"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

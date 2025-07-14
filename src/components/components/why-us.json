@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_components_whyuses",
+  "info": {
+    "displayName": "whyUs",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "listPoints": {
+      "type": "component",
+      "component": "components.list",
+      "repeatable": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "components.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

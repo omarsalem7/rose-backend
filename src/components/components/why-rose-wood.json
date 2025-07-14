@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_components_why_rose_woods",
+  "info": {
+    "displayName": "whyRoseWood",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "one": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": false
+    },
+    "two": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": false
+    },
+    "three": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": false
+    },
+    "four": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": false
+    },
+    "five": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": false
+    },
+    "six": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

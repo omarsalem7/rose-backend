@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_components_cards",
+  "info": {
+    "displayName": "card",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

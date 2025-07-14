@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "home-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "components.header",
+      "repeatable": false,
+      "required": true
+    },
+    "aboutSection": {
+      "type": "component",
+      "component": "components.why-us",
+      "repeatable": false
+    },
+    "featureSection": {
+      "type": "component",
+      "component": "components.feature-section",
+      "repeatable": false,
+      "required": true
+    },
+    "bulkOrder": {
+      "type": "component",
+      "component": "components.bulk-order",
+      "repeatable": false
+    },
+    "ProductCarouselSectionTitle": {
+      "type": "string"
+    },
+    "videoSection": {
+      "type": "component",
+      "component": "components.video-section",
+      "repeatable": false
+    },
+    "whyChooseTitle": {
+      "type": "string"
+    }
+  }
+}

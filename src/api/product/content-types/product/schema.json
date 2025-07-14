@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "type": "string",
+      "default": "متاح تصنيع حسب المقاس / اللون / التغليف"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 250
+    },
+    "brand": {
+      "type": "string"
+    },
+    "sizes": {
+      "type": "component",
+      "component": "components.list",
+      "repeatable": true
+    },
+    "mainImageUrl": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "colors": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

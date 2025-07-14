@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_feature_sections",
+  "info": {
+    "displayName": "featureSection",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "مزايا روز وود التنافسية",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "component": "components.list-text-img",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}
