@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_about_us_our_messages",
+  "info": {
+    "displayName": "our-message"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "components.list",
+      "repeatable": true,
+      "max": 4
+    },
+    "endDescription": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

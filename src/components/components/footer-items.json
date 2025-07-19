@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_footer_items",
+  "info": {
+    "displayName": "footerItems"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "components.list-text-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

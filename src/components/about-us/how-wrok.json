@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_about_us_how_wroks",
+  "info": {
+    "displayName": "how-wrok"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "component": "components.list",
+      "repeatable": true,
+      "max": 6
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "buttons": {
+      "type": "component",
+      "component": "components.button",
+      "repeatable": true,
+      "max": 2
+    }
+  },
+  "config": {}
+}

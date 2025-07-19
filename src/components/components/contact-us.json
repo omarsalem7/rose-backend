@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_components_contactuses",
+  "info": {
+    "displayName": "contactUs",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "fieldName": {
+      "type": "string"
+    },
+    "fieldPhone": {
+      "type": "string"
+    },
+    "fieldEmail": {
+      "type": "string"
+    },
+    "fieldMessage": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

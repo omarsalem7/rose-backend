@@ -15,7 +15,8 @@
       "type": "component",
       "component": "components.list-text-img",
       "repeatable": true,
-      "required": true
+      "required": true,
+      "max": 6
     }
   },
   "config": {}

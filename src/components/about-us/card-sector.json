@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_about_us_card_sectors",
+  "info": {
+    "displayName": "card-sector"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "component": "components.list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

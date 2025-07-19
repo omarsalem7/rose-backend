@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_quotations",
+  "info": {
+    "displayName": "quotation",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

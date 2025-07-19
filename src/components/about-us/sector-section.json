@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_us_sector_sections",
+  "info": {
+    "displayName": "sector-section"
+  },
+  "options": {},
+  "attributes": {
+    "card": {
+      "type": "component",
+      "component": "about-us.card-sector",
+      "repeatable": true,
+      "max": 2
+    }
+  },
+  "config": {}
+}

@@ -9,35 +9,11 @@
     "title": {
       "type": "string"
     },
-    "one": {
+    "features": {
       "type": "component",
       "component": "components.list-text-img",
-      "repeatable": false
-    },
-    "two": {
-      "type": "component",
-      "component": "components.list-text-img",
-      "repeatable": false
-    },
-    "three": {
-      "type": "component",
-      "component": "components.list-text-img",
-      "repeatable": false
-    },
-    "four": {
-      "type": "component",
-      "component": "components.list-text-img",
-      "repeatable": false
-    },
-    "five": {
-      "type": "component",
-      "component": "components.list-text-img",
-      "repeatable": false
-    },
-    "six": {
-      "type": "component",
-      "component": "components.list-text-img",
-      "repeatable": false
+      "repeatable": true,
+      "max": 6
     }
   },
   "config": {}
