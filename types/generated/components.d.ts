@@ -143,6 +143,7 @@ export interface ComponentsContactUs extends Struct.ComponentSchema {
     icon: 'file';
   };
   attributes: {
+    fieldAddress: Schema.Attribute.String;
     fieldEmail: Schema.Attribute.String;
     fieldMessage: Schema.Attribute.Text;
     fieldName: Schema.Attribute.String;
@@ -298,6 +299,103 @@ export interface ComponentsWhyUs extends Struct.ComponentSchema {
   };
 }
 
+export interface WhalesaleGlobal extends Struct.ComponentSchema {
+  collectionName: 'components_whalesale_globals';
+  info: {
+    displayName: 'global';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    service: Schema.Attribute.Component<'whalesale.service', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WhalesaleHero extends Struct.ComponentSchema {
+  collectionName: 'components_whalesale_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image1: Schema.Attribute.Media<'images'>;
+    image2: Schema.Attribute.Media<'images'>;
+    image3: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WhalesaleService extends Struct.ComponentSchema {
+  collectionName: 'components_whalesale_services';
+  info: {
+    displayName: 'service';
+  };
+  attributes: {
+    buttontext: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image1: Schema.Attribute.Media<'images'>;
+    image2: Schema.Attribute.Media<'images'>;
+    list: Schema.Attribute.Component<'components.list', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WoodStepsHero extends Struct.ComponentSchema {
+  collectionName: 'components_wood_steps_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image1: Schema.Attribute.Media<'images'>;
+    image2: Schema.Attribute.Media<'images'>;
+    image3: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WoodStepsStepItem extends Struct.ComponentSchema {
+  collectionName: 'components_wood_steps_step_items';
+  info: {
+    displayName: 'step-item';
+  };
+  attributes: {
+    bgImg: Schema.Attribute.Media<'images'>;
+    description: Schema.Attribute.Text;
+    img1: Schema.Attribute.Media<'images', true>;
+    img2: Schema.Attribute.Media<'images'>;
+    list: Schema.Attribute.Component<'components.list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 6;
+        },
+        number
+      >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WoodStepsSteps extends Struct.ComponentSchema {
+  collectionName: 'components_wood_steps_steps';
+  info: {
+    displayName: 'steps';
+  };
+  attributes: {
+    btnProducts: Schema.Attribute.String;
+    btnSample: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    stepsList: Schema.Attribute.Component<'wood-steps.step-item', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 8;
+          min: 3;
+        },
+        number
+      >;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -322,6 +420,12 @@ declare module '@strapi/strapi' {
       'components.video-section': ComponentsVideoSection;
       'components.why-rose-wood': ComponentsWhyRoseWood;
       'components.why-us': ComponentsWhyUs;
+      'whalesale.global': WhalesaleGlobal;
+      'whalesale.hero': WhalesaleHero;
+      'whalesale.service': WhalesaleService;
+      'wood-steps.hero': WoodStepsHero;
+      'wood-steps.step-item': WoodStepsStepItem;
+      'wood-steps.steps': WoodStepsSteps;
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_wood_steps_steps",
+  "info": {
+    "displayName": "steps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stepsList": {
+      "type": "component",
+      "component": "wood-steps.step-item",
+      "repeatable": true,
+      "min": 3,
+      "max": 8
+    },
+    "btnProducts": {
+      "type": "string"
+    },
+    "btnSample": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

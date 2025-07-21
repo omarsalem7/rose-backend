@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_whalesale_globals",
+  "info": {
+    "displayName": "global"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service": {
+      "type": "component",
+      "component": "whalesale.service",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

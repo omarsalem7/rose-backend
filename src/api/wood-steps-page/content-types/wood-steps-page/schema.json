@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "wood_steps_pages",
+  "info": {
+    "singularName": "wood-steps-page",
+    "pluralName": "wood-steps-pages",
+    "displayName": "wood-steps-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "wood-steps.hero",
+      "repeatable": false
+    },
+    "steps": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "wood-steps.steps",
+      "repeatable": false
+    }
+  }
+}

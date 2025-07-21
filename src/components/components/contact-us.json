@@ -23,6 +23,9 @@
     },
     "fieldMessage": {
       "type": "text"
+    },
+    "fieldAddress": {
+      "type": "string"
     }
   },
   "config": {}

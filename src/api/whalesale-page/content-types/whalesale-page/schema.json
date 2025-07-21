@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "whalesale_pages",
+  "info": {
+    "singularName": "whalesale-page",
+    "pluralName": "whalesale-pages",
+    "displayName": "whalesale-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "whalesale.hero",
+      "repeatable": false
+    },
+    "global": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "whalesale.global",
+      "repeatable": false
+    },
+    "local": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "whalesale.service",
+      "repeatable": false
+    }
+  }
+}
