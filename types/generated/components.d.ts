@@ -136,6 +136,24 @@ export interface ComponentsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsColorsTextImg extends Struct.ComponentSchema {
+  collectionName: 'components_components_colors_text_img_s';
+  info: {
+    displayName: 'colors(text-img)';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images'>;
+    text: Schema.Attribute.Enumeration<
+      [
+        '\u0628\u0646\u064A \u062F\u0627\u0643\u0646',
+        '\u0628\u0646\u064A',
+        '\u0628\u064A\u062C',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'\u0628\u0646\u064A'>;
+  };
+}
+
 export interface ComponentsContactUs extends Struct.ComponentSchema {
   collectionName: 'components_components_contactuses';
   info: {
@@ -408,6 +426,7 @@ declare module '@strapi/strapi' {
       'components.bulk-order': ComponentsBulkOrder;
       'components.button': ComponentsButton;
       'components.card': ComponentsCard;
+      'components.colors-text-img': ComponentsColorsTextImg;
       'components.contact-us': ComponentsContactUs;
       'components.feature-section': ComponentsFeatureSection;
       'components.footer-items': ComponentsFooterItems;

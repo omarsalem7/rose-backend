@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_colors_text_img_s",
+  "info": {
+    "displayName": "colors(text-img)"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "enumeration",
+      "default": "بني",
+      "enum": [
+        "بني داكن",
+        "بني",
+        "بيج"
+      ]
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
