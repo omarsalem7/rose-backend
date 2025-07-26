@@ -40,6 +40,7 @@
         }
       },
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
@@ -52,6 +53,7 @@
         }
       },
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
@@ -69,7 +71,8 @@
           "localized": true
         }
       },
-      "default": "عرض التفاصيل"
+      "default": "عرض التفاصيل",
+      "required": true
     }
   }
 }
