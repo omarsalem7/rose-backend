@@ -991,6 +991,12 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    blogs: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     contactUs: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1014,6 +1020,12 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::navbar.navbar'>;
+    manufacturingSteps: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     offerPrice: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

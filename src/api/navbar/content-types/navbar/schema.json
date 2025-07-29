@@ -47,6 +47,22 @@
         }
       }
     },
+    "manufacturingSteps": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "blogs": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "visualFeeding": {
       "type": "string",
       "pluginOptions": {
