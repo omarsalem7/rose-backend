@@ -206,9 +206,15 @@ export interface ComponentsFooterItems extends Struct.ComponentSchema {
 export interface ComponentsFooterList extends Struct.ComponentSchema {
   collectionName: 'components_components_footer_lists';
   info: {
-    displayName: 'footer-list';
+    displayName: 'footer-links-rose';
   };
-  attributes: {};
+  attributes: {
+    contactUs: Schema.Attribute.String;
+    home: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    whoUs: Schema.Attribute.String;
+    whyUs: Schema.Attribute.String;
+  };
 }
 
 export interface ComponentsHeader extends Struct.ComponentSchema {

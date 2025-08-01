@@ -1,9 +1,25 @@
 {
   "collectionName": "components_components_footer_lists",
   "info": {
-    "displayName": "footer-list"
+    "displayName": "footer-links-rose"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "home": {
+      "type": "string"
+    },
+    "whoUs": {
+      "type": "string"
+    },
+    "whyUs": {
+      "type": "string"
+    },
+    "contactUs": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

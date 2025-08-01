@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "footerItems": {
+    "socialMedia": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -23,13 +23,77 @@
         }
       },
       "component": "components.footer-items",
-      "repeatable": true
+      "repeatable": false
+    },
+    "services": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "components.footer-items",
+      "repeatable": false
+    },
+    "ourProducts": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "components.footer-items",
+      "repeatable": false
     },
     "verticalText": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
+        }
+      }
+    },
+    "rosewoodLinks": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "components.footer-list",
+      "repeatable": false
+    },
+    "importantLinks": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "components.footer-items",
+      "repeatable": false
+    },
+    "location": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "phone": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "email": {
+      "type": "email",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
         }
       }
     }
