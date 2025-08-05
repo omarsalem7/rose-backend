@@ -968,6 +968,8 @@ export interface ApiInternationalExportInternationalExport
   };
   attributes: {
     activity: Schema.Attribute.String;
+    chooseAllProducts: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     city: Schema.Attribute.String;
     companyName: Schema.Attribute.String & Schema.Attribute.Required;
     country: Schema.Attribute.String & Schema.Attribute.Required;
@@ -1010,6 +1012,8 @@ export interface ApiLocalExportLocalExport extends Struct.CollectionTypeSchema {
   };
   attributes: {
     address: Schema.Attribute.String & Schema.Attribute.Required;
+    chooseAllProducts: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     city: Schema.Attribute.String & Schema.Attribute.Required;
     companyName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
@@ -1157,6 +1161,8 @@ export interface ApiPriceQuotationPriceQuotation
   };
   attributes: {
     address: Schema.Attribute.String & Schema.Attribute.Required;
+    chooseAllProducts: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     city: Schema.Attribute.String & Schema.Attribute.Required;
     companyName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
@@ -1231,13 +1237,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: false;
         };
-      }> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 3;
-        },
-        number
-      >;
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

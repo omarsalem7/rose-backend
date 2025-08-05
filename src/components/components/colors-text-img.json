@@ -5,21 +5,19 @@
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "enumeration",
-      "default": "بني",
-      "enum": [
-        "بني داكن",
-        "بني",
-        "بيج"
-      ]
-    },
     "img": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
+    },
+    "color": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
     }
   },
   "config": {}

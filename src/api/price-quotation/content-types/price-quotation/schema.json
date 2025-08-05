@@ -52,6 +52,10 @@
         "done",
         "fake"
       ]
+    },
+    "chooseAllProducts": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -98,8 +98,7 @@
         }
       },
       "component": "components.colors-text-img",
-      "repeatable": true,
-      "max": 3
+      "repeatable": true
     },
     "productDetailsImage": {
       "type": "media",

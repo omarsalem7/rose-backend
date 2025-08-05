@@ -58,6 +58,10 @@
     },
     "specialRequests": {
       "type": "text"
+    },
+    "chooseAllProducts": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

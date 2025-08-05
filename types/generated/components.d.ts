@@ -142,15 +142,10 @@ export interface ComponentsColorsTextImg extends Struct.ComponentSchema {
     displayName: 'colors(text-img)';
   };
   attributes: {
-    img: Schema.Attribute.Media<'images'>;
-    text: Schema.Attribute.Enumeration<
-      [
-        '\u0628\u0646\u064A \u062F\u0627\u0643\u0646',
-        '\u0628\u0646\u064A',
-        '\u0628\u064A\u062C',
-      ]
-    > &
-      Schema.Attribute.DefaultTo<'\u0628\u0646\u064A'>;
+    color: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    img: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
