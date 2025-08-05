@@ -1148,6 +1148,35 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiOrderItemOrderItem extends Struct.CollectionTypeSchema {
+  collectionName: 'order_items';
+  info: {
+    displayName: 'order-item';
+    pluralName: 'order-items';
+    singularName: 'order-item';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::order-item.order-item'
+    > &
+      Schema.Attribute.Private;
+    product: Schema.Attribute.Relation<'oneToOne', 'api::product.product'>;
+    publishedAt: Schema.Attribute.DateTime;
+    quantity: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPriceQuotationPriceQuotation
   extends Struct.CollectionTypeSchema {
   collectionName: 'price_quotations';
@@ -1176,8 +1205,11 @@ export interface ApiPriceQuotationPriceQuotation
       'api::price-quotation.price-quotation'
     > &
       Schema.Attribute.Private;
+    order_items: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::order-item.order-item'
+    >;
     phone: Schema.Attribute.String & Schema.Attribute.Required;
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     requestStatus: Schema.Attribute.Enumeration<
       ['new', 'inprogress', 'done', 'fake']
@@ -1986,6 +2018,7 @@ declare module '@strapi/strapi' {
       'api::international-export.international-export': ApiInternationalExportInternationalExport;
       'api::local-export.local-export': ApiLocalExportLocalExport;
       'api::navbar.navbar': ApiNavbarNavbar;
+      'api::order-item.order-item': ApiOrderItemOrderItem;
       'api::price-quotation.price-quotation': ApiPriceQuotationPriceQuotation;
       'api::product.product': ApiProductProduct;
       'api::request-sample.request-sample': ApiRequestSampleRequestSample;

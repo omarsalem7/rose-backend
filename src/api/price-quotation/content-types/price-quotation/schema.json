@@ -34,11 +34,6 @@
       "type": "string",
       "required": true
     },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
-    },
     "specialRequests": {
       "type": "text"
     },
@@ -56,6 +51,11 @@
     "chooseAllProducts": {
       "type": "boolean",
       "default": false
+    },
+    "order_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-item.order-item"
     }
   }
 }
