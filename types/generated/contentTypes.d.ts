@@ -1406,6 +1406,56 @@ export interface ApiRequestSampleRequestSample
   };
 }
 
+export interface ApiSeoSeo extends Struct.SingleTypeSchema {
+  collectionName: 'seos';
+  info: {
+    displayName: 'SEO';
+    pluralName: 'seos';
+    singularName: 'seo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'description'>;
+    keywords: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'rosewood, plates, mall arab'>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::seo.seo'>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'Rosewood'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiWhalesalePageWhalesalePage extends Struct.SingleTypeSchema {
   collectionName: 'whalesale_pages';
   info: {
@@ -2022,6 +2072,7 @@ declare module '@strapi/strapi' {
       'api::price-quotation.price-quotation': ApiPriceQuotationPriceQuotation;
       'api::product.product': ApiProductProduct;
       'api::request-sample.request-sample': ApiRequestSampleRequestSample;
+      'api::seo.seo': ApiSeoSeo;
       'api::whalesale-page.whalesale-page': ApiWhalesalePageWhalesalePage;
       'api::wood-steps-page.wood-steps-page': ApiWoodStepsPageWoodStepsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
