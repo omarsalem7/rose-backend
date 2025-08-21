@@ -183,6 +183,12 @@
           "localized": false
         }
       }
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "products"
     }
   }
 }
