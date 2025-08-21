@@ -1,1 +1,5 @@
-module.exports = () => ({});
+module.exports = () => ({
+  "sortable-entries": {
+    enabled: true,
+  },
+});

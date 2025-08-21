@@ -418,7 +418,7 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     singularName: 'about-page';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -500,7 +500,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     singularName: 'blog';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -605,7 +605,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: 'category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -643,6 +643,12 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       }>;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
+    sortOrder: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -664,7 +670,7 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
     singularName: 'contact-page';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -737,7 +743,7 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
     singularName: 'contact';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     address: Schema.Attribute.String;
@@ -773,7 +779,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     singularName: 'footer';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -858,7 +864,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     singularName: 'home-page';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -964,7 +970,7 @@ export interface ApiInternationalExportInternationalExport
     singularName: 'international-export';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     activity: Schema.Attribute.String;
@@ -1008,7 +1014,7 @@ export interface ApiLocalExportLocalExport extends Struct.CollectionTypeSchema {
     singularName: 'local-export';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     address: Schema.Attribute.String & Schema.Attribute.Required;
@@ -1050,7 +1056,7 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     singularName: 'navbar';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1156,7 +1162,7 @@ export interface ApiOrderItemOrderItem extends Struct.CollectionTypeSchema {
     singularName: 'order-item';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -1186,7 +1192,7 @@ export interface ApiPriceQuotationPriceQuotation
     singularName: 'price-quotation';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     address: Schema.Attribute.String & Schema.Attribute.Required;
@@ -1231,7 +1237,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     singularName: 'product';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1352,6 +1358,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    sortOrder: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     totalCartonWeight: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1373,7 +1385,7 @@ export interface ApiRequestSampleRequestSample
     singularName: 'request-sample';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     address: Schema.Attribute.String & Schema.Attribute.Required;
@@ -1456,6 +1468,41 @@ export interface ApiSeoSeo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiTagTag extends Struct.CollectionTypeSchema {
+  collectionName: 'tags';
+  info: {
+    displayName: 'tag';
+    pluralName: 'tags';
+    singularName: 'tag';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiWhalesalePageWhalesalePage extends Struct.SingleTypeSchema {
   collectionName: 'whalesale_pages';
   info: {
@@ -1464,7 +1511,7 @@ export interface ApiWhalesalePageWhalesalePage extends Struct.SingleTypeSchema {
     singularName: 'whalesale-page';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1513,7 +1560,7 @@ export interface ApiWoodStepsPageWoodStepsPage extends Struct.SingleTypeSchema {
     singularName: 'wood-steps-page';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -2073,6 +2120,7 @@ declare module '@strapi/strapi' {
       'api::product.product': ApiProductProduct;
       'api::request-sample.request-sample': ApiRequestSampleRequestSample;
       'api::seo.seo': ApiSeoSeo;
+      'api::tag.tag': ApiTagTag;
       'api::whalesale-page.whalesale-page': ApiWhalesalePageWhalesalePage;
       'api::wood-steps-page.wood-steps-page': ApiWoodStepsPageWoodStepsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;

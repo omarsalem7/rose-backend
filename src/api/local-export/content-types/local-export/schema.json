@@ -7,7 +7,7 @@
     "displayName": "local-export"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -15,12 +15,7 @@
       "type": "enumeration",
       "private": true,
       "default": "new",
-      "enum": [
-        "new",
-        "inprogress",
-        "done",
-        "fake"
-      ]
+      "enum": ["new", "inprogress", "done", "fake"]
     },
     "fullName": {
       "type": "string",

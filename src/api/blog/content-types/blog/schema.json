@@ -7,7 +7,7 @@
     "displayName": "blog"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -40,9 +40,7 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "image2": {
       "type": "media",
@@ -53,9 +51,7 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "imageCaption": {
       "type": "text",
@@ -82,9 +78,7 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "subDescription1": {
       "type": "text",
