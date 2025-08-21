@@ -220,6 +220,7 @@ export interface ComponentsHeader extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    mobileImg: Schema.Attribute.Media<'images'>;
     subTitle: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -266,6 +267,7 @@ export interface ComponentsQuotation extends Struct.ComponentSchema {
   };
   attributes: {
     buttonText: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
 }
@@ -405,8 +407,7 @@ export interface WoodStepsSteps extends Struct.ComponentSchema {
     stepsList: Schema.Attribute.Component<'wood-steps.step-item', true> &
       Schema.Attribute.SetMinMax<
         {
-          max: 8;
-          min: 3;
+          min: 1;
         },
         number
       >;

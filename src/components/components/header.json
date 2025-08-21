@@ -21,6 +21,13 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "mobileImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}
