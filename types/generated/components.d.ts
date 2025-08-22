@@ -132,6 +132,7 @@ export interface ComponentsCard extends Struct.ComponentSchema {
   attributes: {
     buttonText: Schema.Attribute.String;
     description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
 }

@@ -24,6 +24,14 @@
       },
       "required": true
     },
+    "code": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "availableQuantities": {
       "type": "string",
       "pluginOptions": {
@@ -56,7 +64,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "default": "روز وود"
     },
     "mainImageUrl": {
       "type": "media",
@@ -111,6 +120,14 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "dimension": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "quantityPerCarton": {
       "type": "string",

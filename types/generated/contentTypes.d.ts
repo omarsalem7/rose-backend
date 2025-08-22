@@ -1256,7 +1256,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'\u0631\u0648\u0632 \u0648\u0648\u062F'>;
     cartonDimensions: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1270,6 +1271,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    code: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     colors: Schema.Attribute.Component<'components.colors-text-img', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1287,6 +1294,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 250;
+      }>;
+    dimension: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
       }>;
     features: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
