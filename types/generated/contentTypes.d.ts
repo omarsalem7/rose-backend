@@ -1229,6 +1229,43 @@ export interface ApiPriceQuotationPriceQuotation
   };
 }
 
+export interface ApiProductDetailProductDetail extends Struct.SingleTypeSchema {
+  collectionName: 'product_details';
+  info: {
+    displayName: 'product-detail';
+    pluralName: 'product-details';
+    singularName: 'product-detail';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-detail.product-detail'
+    >;
+    productInfo: Schema.Attribute.Component<'about-us.how-wrok', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -2132,6 +2169,7 @@ declare module '@strapi/strapi' {
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::order-item.order-item': ApiOrderItemOrderItem;
       'api::price-quotation.price-quotation': ApiPriceQuotationPriceQuotation;
+      'api::product-detail.product-detail': ApiProductDetailProductDetail;
       'api::product.product': ApiProductProduct;
       'api::request-sample.request-sample': ApiRequestSampleRequestSample;
       'api::seo.seo': ApiSeoSeo;
