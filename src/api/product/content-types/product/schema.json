@@ -93,6 +93,16 @@
         "images"
       ]
     },
+    "sizes": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "components.size-list",
+      "repeatable": true
+    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",

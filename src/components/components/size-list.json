@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_size_lists",
+  "info": {
+    "displayName": "size-list"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dimension": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

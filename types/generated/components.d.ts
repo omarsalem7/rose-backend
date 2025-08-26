@@ -273,6 +273,17 @@ export interface ComponentsQuotation extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsSizeList extends Struct.ComponentSchema {
+  collectionName: 'components_components_size_lists';
+  info: {
+    displayName: 'size-list';
+  };
+  attributes: {
+    dimension: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsVideoSection extends Struct.ComponentSchema {
   collectionName: 'components_components_video_sections';
   info: {
@@ -438,6 +449,7 @@ declare module '@strapi/strapi' {
       'components.list-text-img': ComponentsListTextImg;
       'components.list-text-link': ComponentsListTextLink;
       'components.quotation': ComponentsQuotation;
+      'components.size-list': ComponentsSizeList;
       'components.video-section': ComponentsVideoSection;
       'components.why-rose-wood': ComponentsWhyRoseWood;
       'components.why-us': ComponentsWhyUs;

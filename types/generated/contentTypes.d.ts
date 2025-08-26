@@ -1408,6 +1408,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    sizes: Schema.Attribute.Component<'components.size-list', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     sortOrder: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1463,6 +1469,43 @@ export interface ApiRequestSampleRequestSample
       Schema.Attribute.Private &
       Schema.Attribute.DefaultTo<'new'>;
     specialRequests: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiResourceResource extends Struct.SingleTypeSchema {
+  collectionName: 'resources';
+  info: {
+    displayName: 'resource';
+    pluralName: 'resources';
+    singularName: 'resource';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    catelogUrl: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::resource.resource'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2172,6 +2215,7 @@ declare module '@strapi/strapi' {
       'api::product-detail.product-detail': ApiProductDetailProductDetail;
       'api::product.product': ApiProductProduct;
       'api::request-sample.request-sample': ApiRequestSampleRequestSample;
+      'api::resource.resource': ApiResourceResource;
       'api::seo.seo': ApiSeoSeo;
       'api::tag.tag': ApiTagTag;
       'api::whalesale-page.whalesale-page': ApiWhalesalePageWhalesalePage;
