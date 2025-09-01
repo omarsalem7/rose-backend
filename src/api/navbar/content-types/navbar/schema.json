@@ -87,6 +87,14 @@
         }
       }
     },
+    "catalog": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "facebook": {
       "type": "string",
       "pluginOptions": {
@@ -112,6 +120,22 @@
       }
     },
     "youtube": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "tiktok": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "instagram": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

@@ -25,16 +25,6 @@
       "component": "components.footer-items",
       "repeatable": false
     },
-    "services": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "components.footer-items",
-      "repeatable": false
-    },
     "ourProducts": {
       "type": "component",
       "pluginOptions": {

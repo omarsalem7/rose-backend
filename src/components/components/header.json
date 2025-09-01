@@ -19,14 +19,16 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images"
+        "images",
+        "videos"
       ]
     },
     "mobileImg": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "videos"
       ]
     }
   },

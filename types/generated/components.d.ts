@@ -220,8 +220,9 @@ export interface ComponentsHeader extends Struct.ComponentSchema {
     icon: 'bold';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    mobileImg: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'> &
+      Schema.Attribute.Required;
+    mobileImg: Schema.Attribute.Media<'images' | 'videos'>;
     subTitle: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
