@@ -7,7 +7,9 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 200,
+      "required": false
     },
     "buttonText": {
       "type": "string"

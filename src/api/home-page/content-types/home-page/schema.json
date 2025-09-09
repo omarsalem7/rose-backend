@@ -63,7 +63,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 200
     },
     "videoSection": {
       "type": "component",
@@ -91,7 +92,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 200
     },
     "quotationSection": {
       "type": "component",

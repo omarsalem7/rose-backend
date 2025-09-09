@@ -22,15 +22,17 @@
           "localized": true
         }
       },
+      "maxLength": 200,
       "required": true
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 500
     },
     "mainImage": {
       "type": "media",

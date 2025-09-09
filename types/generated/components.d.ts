@@ -8,8 +8,14 @@ export interface AboutUsCardSector extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images'>;
     list: Schema.Attribute.Component<'components.list', true>;
-    subTitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -20,7 +26,10 @@ export interface AboutUsHero extends Struct.ComponentSchema {
     icon: 'attachment';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
@@ -47,8 +56,14 @@ export interface AboutUsHowWrok extends Struct.ComponentSchema {
         },
         number
       >;
-    subTitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -65,8 +80,14 @@ export interface AboutUsOurMessage extends Struct.ComponentSchema {
         },
         number
       >;
-    endDescription: Schema.Attribute.Text;
-    subTitle: Schema.Attribute.String;
+    endDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 500;
+      }>;
+    subTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     title: Schema.Attribute.String;
   };
 }
@@ -77,8 +98,14 @@ export interface AboutUsOurVision extends Struct.ComponentSchema {
     displayName: 'our-vision';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -107,7 +134,10 @@ export interface ComponentsBulkOrder extends Struct.ComponentSchema {
   attributes: {
     card1: Schema.Attribute.Component<'components.card', false>;
     card2: Schema.Attribute.Component<'components.card', false>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -131,9 +161,15 @@ export interface ComponentsCard extends Struct.ComponentSchema {
   };
   attributes: {
     buttonText: Schema.Attribute.String;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     image: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -162,8 +198,14 @@ export interface ComponentsContactUs extends Struct.ComponentSchema {
     fieldMessage: Schema.Attribute.Text;
     fieldName: Schema.Attribute.String;
     fieldPhone: Schema.Attribute.String;
-    subTitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -184,6 +226,9 @@ export interface ComponentsFeatureSection extends Struct.ComponentSchema {
       >;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }> &
       Schema.Attribute.DefaultTo<'\u0645\u0632\u0627\u064A\u0627 \u0631\u0648\u0632 \u0648\u0648\u062F \u0627\u0644\u062A\u0646\u0627\u0641\u0633\u064A\u0629'>;
   };
 }
@@ -195,7 +240,10 @@ export interface ComponentsFooterItems extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<'components.list-text-link', true>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -207,7 +255,10 @@ export interface ComponentsFooterList extends Struct.ComponentSchema {
   attributes: {
     contactUs: Schema.Attribute.String;
     home: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     whoUs: Schema.Attribute.String;
     whyUs: Schema.Attribute.String;
   };
@@ -223,8 +274,16 @@ export interface ComponentsHeader extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.Required;
     mobileImg: Schema.Attribute.Media<'images' | 'videos'>;
-    subTitle: Schema.Attribute.Text & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    subTitle: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -235,7 +294,10 @@ export interface ComponentsList extends Struct.ComponentSchema {
     icon: 'arrowRight';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    text: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -246,7 +308,10 @@ export interface ComponentsListTextImg extends Struct.ComponentSchema {
   };
   attributes: {
     img: Schema.Attribute.Media<'images'>;
-    text: Schema.Attribute.String;
+    text: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -256,7 +321,10 @@ export interface ComponentsListTextLink extends Struct.ComponentSchema {
     displayName: 'list(text-link)';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    text: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     url: Schema.Attribute.String;
   };
 }
@@ -270,7 +338,10 @@ export interface ComponentsQuotation extends Struct.ComponentSchema {
   attributes: {
     buttonText: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -292,9 +363,15 @@ export interface ComponentsVideoSection extends Struct.ComponentSchema {
     icon: 'chartBubble';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     thumbnail: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     video: Schema.Attribute.Media<'videos'>;
   };
 }
@@ -313,7 +390,10 @@ export interface ComponentsWhyRoseWood extends Struct.ComponentSchema {
         },
         number
       >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -325,10 +405,17 @@ export interface ComponentsWhyUs extends Struct.ComponentSchema {
   };
   attributes: {
     buttons: Schema.Attribute.Component<'components.button', true>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     listPoints: Schema.Attribute.Component<'components.list', true>;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -338,9 +425,15 @@ export interface WhalesaleGlobal extends Struct.ComponentSchema {
     displayName: 'global';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     service: Schema.Attribute.Component<'whalesale.service', false>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -350,11 +443,17 @@ export interface WhalesaleHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     image1: Schema.Attribute.Media<'images'>;
     image2: Schema.Attribute.Media<'images'>;
     image3: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -365,11 +464,17 @@ export interface WhalesaleService extends Struct.ComponentSchema {
   };
   attributes: {
     buttontext: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     image1: Schema.Attribute.Media<'images'>;
     image2: Schema.Attribute.Media<'images'>;
     list: Schema.Attribute.Component<'components.list', true>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -379,11 +484,17 @@ export interface WoodStepsHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     image1: Schema.Attribute.Media<'images'>;
     image2: Schema.Attribute.Media<'images'>;
     image3: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -394,7 +505,10 @@ export interface WoodStepsStepItem extends Struct.ComponentSchema {
   };
   attributes: {
     bgImg: Schema.Attribute.Media<'images'>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     img1: Schema.Attribute.Media<'images', true>;
     img2: Schema.Attribute.Media<'images'>;
     list: Schema.Attribute.Component<'components.list', true> &
@@ -404,7 +518,10 @@ export interface WoodStepsStepItem extends Struct.ComponentSchema {
         },
         number
       >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 
@@ -416,7 +533,10 @@ export interface WoodStepsSteps extends Struct.ComponentSchema {
   attributes: {
     btnProducts: Schema.Attribute.String;
     btnSample: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     stepsList: Schema.Attribute.Component<'wood-steps.step-item', true> &
       Schema.Attribute.SetMinMax<
         {
@@ -424,7 +544,10 @@ export interface WoodStepsSteps extends Struct.ComponentSchema {
         },
         number
       >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
   };
 }
 

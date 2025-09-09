@@ -10,7 +10,8 @@
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 500
     },
     "image": {
       "type": "media",

@@ -9,6 +9,7 @@
     "title": {
       "type": "string",
       "default": "مزايا روز وود التنافسية",
+      "maxLength": 200,
       "required": true
     },
     "cards": {

@@ -21,7 +21,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 200
     },
     "description": {
       "type": "text",
@@ -40,7 +41,9 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "image2": {
       "type": "media",
@@ -51,7 +54,9 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "imageCaption": {
       "type": "text",
@@ -67,7 +72,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 200
     },
     "subImage": {
       "type": "media",
@@ -78,7 +84,9 @@
       },
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "subDescription1": {
       "type": "text",

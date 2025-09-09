@@ -71,7 +71,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 200
     },
     "phone": {
       "type": "string",

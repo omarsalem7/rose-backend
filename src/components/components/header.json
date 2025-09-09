@@ -8,10 +8,12 @@
   "attributes": {
     "title": {
       "type": "string",
+      "maxLength": 200,
       "required": true
     },
     "subTitle": {
       "type": "text",
+      "maxLength": 200,
       "required": true
     },
     "image": {

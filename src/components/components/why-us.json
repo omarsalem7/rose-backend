@@ -16,10 +16,12 @@
     },
     "title": {
       "type": "string",
+      "maxLength": 200,
       "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 500
     },
     "listPoints": {
       "type": "component",

@@ -9,7 +9,8 @@
       "type": "string"
     },
     "subTitle": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 200
     },
     "cards": {
       "type": "component",
@@ -18,7 +19,8 @@
       "max": 4
     },
     "endDescription": {
-      "type": "text"
+      "type": "text",
+      "minLength": 500
     }
   },
   "config": {}

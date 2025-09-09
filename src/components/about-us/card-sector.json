@@ -13,10 +13,12 @@
       ]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 200
     },
     "subTitle": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 200
     },
     "list": {
       "type": "component",

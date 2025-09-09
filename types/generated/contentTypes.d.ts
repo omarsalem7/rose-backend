@@ -457,6 +457,9 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     ourMessage: Schema.Attribute.Component<'about-us.our-message', false> &
       Schema.Attribute.SetPluginOptions<{
@@ -578,6 +581,9 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     subTitle2: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -590,6 +596,9 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -616,11 +625,14 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String &
+    description: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -640,6 +652,9 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
@@ -689,6 +704,9 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -877,6 +895,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     bulkOrder: Schema.Attribute.Component<'components.bulk-order', false> &
       Schema.Attribute.SetPluginOptions<{
@@ -920,6 +941,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     publishedAt: Schema.Attribute.DateTime;
     quotationSection: Schema.Attribute.Component<
@@ -1312,12 +1336,18 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     cartonVolume: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     code: Schema.Attribute.String &
@@ -1325,6 +1355,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: false;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     colors: Schema.Attribute.Component<'components.colors-text-img', true> &
       Schema.Attribute.SetPluginOptions<{
@@ -1342,19 +1375,25 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 250;
+        maxLength: 500;
       }>;
     dimension: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     features: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }> &
       Schema.Attribute.DefaultTo<'\u0645\u062A\u0627\u062D \u062A\u0635\u0646\u064A\u0639 \u062D\u0633\u0628 \u0627\u0644\u0645\u0642\u0627\u0633 / \u0627\u0644\u0644\u0648\u0646 / \u0627\u0644\u062A\u063A\u0644\u064A\u0641'>;
     gallery: Schema.Attribute.Media<'images', true> &
@@ -1382,30 +1421,45 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     netCartonWeight: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     netProductWeight: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     outerPackaging: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     packagingPerUnit: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     productDetailsImage: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
@@ -1419,6 +1473,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     sizes: Schema.Attribute.Component<'components.size-list', true> &
       Schema.Attribute.SetPluginOptions<{
@@ -1438,6 +1495,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1508,6 +1568,9 @@ export interface ApiResourceResource extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
       }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1549,12 +1612,18 @@ export interface ApiSeoSeo extends Struct.SingleTypeSchema {
           localized: true;
         };
       }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 155;
+      }> &
       Schema.Attribute.DefaultTo<'description'>;
     keywords: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
       }> &
       Schema.Attribute.DefaultTo<'rosewood, plates, mall arab'>;
     locale: Schema.Attribute.String;
@@ -1566,6 +1635,9 @@ export interface ApiSeoSeo extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 100;
       }> &
       Schema.Attribute.DefaultTo<'Rosewood'>;
     updatedAt: Schema.Attribute.DateTime;
