@@ -82,7 +82,7 @@ export interface AboutUsOurMessage extends Struct.ComponentSchema {
       >;
     endDescription: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
-        minLength: 500;
+        maxLength: 500;
       }>;
     subTitle: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{

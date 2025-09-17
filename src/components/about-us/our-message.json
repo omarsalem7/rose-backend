@@ -20,7 +20,7 @@
     },
     "endDescription": {
       "type": "text",
-      "minLength": 500
+      "maxLength": 500
     }
   },
   "config": {}
